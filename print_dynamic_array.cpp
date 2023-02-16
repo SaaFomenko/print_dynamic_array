@@ -12,7 +12,15 @@ void print_dynamic_array(int* arr, int logical_size, int actual_size)
 
 	for (int i = 0; i < actual_size; ++i)
 	{
-		std::cout << (arr[i] == 0 ? symv_null : arr[i]) << symv_split;
+		// std::string val_str = std::to_string(arr[i] == 0 ? symv_null : arr[i]);
+		if (arr[i] == 0)
+		{
+			std::cout << symv_null << symv_split;
+		}
+		else
+		{
+			std::cout << arr[i] << symv_split;
+		}
 	}
 
 	std::cout << std::endl;
