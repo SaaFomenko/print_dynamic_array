@@ -6,6 +6,7 @@ int main()
 {
 	const std::string out_actual_size = "Введите фактический размер массива: ";
 	const std::string out_logical_size = "Введите логический размер массива: ";
+	const std::string out_array = "Динамический массив: ";
 	const std::string err_msg = 
 		"Ошибка! Логический размер массива не может превышать фактический!";
 
@@ -36,6 +37,7 @@ int main()
 		userIn(arr[i], out_arr_val);
 	}
 
+	std::cout << out_array;
 	print_dynamic_array(arr, logical_size, actual_size);
 
 	delete[] arr;
