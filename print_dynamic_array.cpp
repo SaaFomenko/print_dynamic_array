@@ -6,6 +6,8 @@ void print_dynamic_array(int* arr, int logical_size, int actual_size)
 {
 	if (logical_size > actual_size)
 	{
+		delete[] arr;
+		arr = nullptr;
 		throw "Error! Logical size do not over actual size!";
 	}
 
