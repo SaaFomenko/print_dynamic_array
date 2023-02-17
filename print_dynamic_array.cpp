@@ -4,6 +4,11 @@
 
 void print_dynamic_array(int* arr, int logical_size, int actual_size)
 {
+	if (logical_size > actual_size)
+	{
+		throw "Error! Logical size do not over actual size!";
+	}
+
 	const std::string out_arr = "Динамический массив: ";
 	const char symv_null = '_';
 	const char symv_split = ' ';
